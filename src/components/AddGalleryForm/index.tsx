@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -15,7 +15,6 @@ type AddGalleryFormProps = {
 };
 
 const AddGalleryForm: React.FC<AddGalleryFormProps> = ({ onSubmit }) => {
-  const [isDisabled, setDisabled] = useState(true);
   const {
     register,
     handleSubmit,
@@ -49,7 +48,6 @@ const AddGalleryForm: React.FC<AddGalleryFormProps> = ({ onSubmit }) => {
 
       <div className="flex items-center justify-between">
         <button
-          disabled={isDisabled}
           className="inline-flex justify-center px-4 py-2 text-sm font-medium text-indigo-900 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500"
           type="submit"
         >
